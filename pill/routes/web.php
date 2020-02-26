@@ -16,6 +16,20 @@ Route::get('/', function () {
 });
 
 
-Route::get('/endpoint', function () {
+Route::get('endpoint', function () {
     return view('endpoint');
 });
+
+Route::get('main', function () {
+    return view('main');
+});
+
+Route::get('create', function () {
+    return view('create');
+});
+
+
+
+// Route::post('/contact', function () {
+//     return view('contact');
+// });
