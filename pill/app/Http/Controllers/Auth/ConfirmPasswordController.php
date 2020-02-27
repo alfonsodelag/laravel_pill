@@ -1,9 +1,9 @@
 <?php
 
-namespace Project\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Project\Http\Controllers\Controller;
-use Project\Providers\RouteServiceProvider;
+use App\Http\Controllers\Controller;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\ConfirmsPasswords;
 
 class ConfirmPasswordController extends Controller

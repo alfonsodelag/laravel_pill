@@ -10,10 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Mail\SendMail;
+use App\Mail\WelcomeMail;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('contact', function () {
+    return view('contact');
+});
+
+Route::post('message', function () {
+    return view('emails/thanks');
+});
+
+Route::post('contact', 'ContactController@store');
 
 
 Route::get('endpoint', function () {
@@ -24,12 +36,5 @@ Route::get('main', function () {
     return view('main');
 });
 
-Route::get('create', function () {
-    return view('create');
-});
+Route::get('send-mail','MailSend@mailsend');
 
-
-
-// Route::post('/contact', function () {
-//     return view('contact');
-// });
