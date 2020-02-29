@@ -21,9 +21,9 @@ Route::get('contact', function () {
     return view('contact');
 });
 
-Route::post('message', function () {
-    return view('emails/thanks');
-});
+// Route::post('message', function () {
+//     return view('emails/thanks');
+// });
 
 Route::post('contact', 'ContactController@store');
 

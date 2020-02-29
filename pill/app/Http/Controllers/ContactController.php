@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
 
 class ContactController extends Controller
 {
@@ -36,16 +38,29 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), [
+            'title' => 'required|unique:posts|max:55',
+            'name' => 'required|unique:posts|max:55',
+            'user_ID' => 'required|unique:posts|max:55',
+            'email' => 'required',
+            'textarea' => 'required|unique:posts|max:55',
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('contact')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+
         $contact = new \stdClass();
         $contact->message=$request->all();
         Mail::to($request->get('email'))->send( new ContactMail($contact));
         return back()->with('message','contact add');
 
-        $validate = $request->validate([
-            'email'=> 'required'
-        ]);
 
-        print_r($request->input());
+
+        print_r($req->input());
+
 
     }
 
@@ -56,6 +71,17 @@ class ContactController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+    {
+
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function submitForm(Request $req)
     {
         //
     }
