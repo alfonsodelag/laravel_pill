@@ -23,6 +23,10 @@ Route::get('contact', function () {
     return view('contact');
 });
 
+Route::get('signup', function () {
+    return view('signup');
+});
+
 Route::get('endpoint', function () {
     return view('endpoint');
 });

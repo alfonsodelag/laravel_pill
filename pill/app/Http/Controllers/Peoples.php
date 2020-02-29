@@ -9,10 +9,9 @@ class Peoples extends Controller
 {
     function list()
     {
-        return People::
+        $data= People::
         orderBy('created_at', 'desc')
-        ->take(1)
         ->get();
-        return view('userview');
+        return view('userview', ['data'=>$data ]);
     }
 }
