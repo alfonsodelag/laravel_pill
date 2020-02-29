@@ -48,3 +48,7 @@ Route::get('main', function () {
 
 Route::get('send-mail','MailSend@mailsend');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
