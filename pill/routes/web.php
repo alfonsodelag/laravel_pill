@@ -17,13 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('list','Peoples@list');
+
 Route::get('contact', function () {
     return view('contact');
 });
 
-// Route::post('message', function () {
-//     return view('emails/thanks');
-// });
+Route::get('endpoint', function () {
+    return view('endpoint');
+});
+
+Route::post('message', function () {
+    return view('emails/thanks');
+});
 
 Route::post('contact', 'ContactController@store');
 

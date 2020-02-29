@@ -38,19 +38,19 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-            'title' => 'required|unique:posts|max:55',
-            'name' => 'required|unique:posts|max:55',
-            'user_ID' => 'required|unique:posts|max:55',
-            'email' => 'required',
-            'textarea' => 'required|unique:posts|max:55',
-        ]);
+        // $validator = Validator::make($request->all(), [
+        //     'title' => 'required|unique:posts|max:55',
+        //     'name' => 'required|unique:posts|max:55',
+        //     'user_ID' => 'required|unique:posts|max:55',
+        //     'email' => 'required',
+        //     'textarea' => 'required|unique:posts|max:55',
+        // ]);
 
-        if ($validator->fails()) {
-            return redirect('contact')
-                        ->withErrors($validator)
-                        ->withInput();
-        }
+        // if ($validator->fails()) {
+        //     return redirect('contact')
+        //                 ->withErrors($validator)
+        //                 ->withInput();
+        // }
 
         $contact = new \stdClass();
         $contact->message=$request->all();

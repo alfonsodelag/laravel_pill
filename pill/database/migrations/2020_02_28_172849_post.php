@@ -17,7 +17,7 @@ class Post extends Migration
             $table->bigIncrements('user_ID');
             $table->char('title',100);
             $table->char('email',100);
-            $table->char('textarea',100);
+            $table->string('textarea',55);
             $table->timestamps();
         });
     }
