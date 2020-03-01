@@ -9,6 +9,8 @@
 <li>{{$e}}</li>
 @endforeach
 
+hello!
+
 @section('content')
 <form method="GET" action="{{action('ContactController@store')}}">
     {{ csrf_field() }}
