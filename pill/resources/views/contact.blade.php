@@ -1,4 +1,5 @@
-@extends('main')
+{{-- @extends('main') --}}
+@extends('layouts.app')
 
 @if(session('message'))
         <p>{{session('message')}}</p>
@@ -9,17 +10,21 @@
 <li>{{$e}}</li>
 @endforeach
 
+{{-- TODO: FILL "ACTION --}}
 @section('content')
-<form method="POST" action="{{action('ContactController@store')}}">
+<form method="POST" action="sendmail">
     {{ csrf_field() }}
 
     <div class="container mt-5">
-        <div class="col-12">
+        <div class="col-12 mt-5">
             <label for="title">Title:</label><input type="text" name="title">
             <label for="email">E-mail:</label><input type="email" name="email">
             <label for="user_ID">User ID</label><input type="number" name="user_ID">
+        </div>
+        <div class="col-12 mt-5">
             <label for="textarea">Text:</label>
             <textarea name="textarea" rows="4" cols="50"></textarea>
+        <div class="col-12">
             <input type="submit">
         </div>
     </div>

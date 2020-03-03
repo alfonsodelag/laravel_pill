@@ -14,12 +14,11 @@ class Articles extends Migration
     public function up()
     {
         Schema::create('articles', function (Blueprint $table) {
-            $table->bigIncrements('article_ID');
+            $table->bigIncrements('id');
             $table->char('article_title',100);
             $table->char('article_summary',100);
             $table->char('slug_article',100);
             $table->string('article_content',2000);
-            $table->char('textarea',100);
             $table->timestamps();
         });
     }
