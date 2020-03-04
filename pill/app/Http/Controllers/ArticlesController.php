@@ -24,7 +24,16 @@ class ArticlesController extends Controller
     {
         $articles = Article::all()->toArray();
         return view('viewarticles', compact('articles'));
+    }
 
+    public function showArticle(Request $request)
+    {
+        $article = Article::first();
+        return view('showarticle', compact('article'));
+    }
+
+    public function showSlug(Request $request)
+    {
 
     }
 }

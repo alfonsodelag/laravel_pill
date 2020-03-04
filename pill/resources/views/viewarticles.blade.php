@@ -18,6 +18,7 @@
                     <td>{{$row['article_summary']}}</td>
                     <td>{{$row['slug_article']}}</td>
                     <td>{{$row['article_content']}}</td>
+                    <td><a class="ml-4" href={{ url('showarticle') }}>View Article</a></td>
                 </tr>
             @endforeach
         </table>

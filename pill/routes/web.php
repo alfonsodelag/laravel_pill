@@ -57,12 +57,22 @@ Route::post('submitArticle', 'ArticlesController@save');
 
 Route::post('sendmail', 'ContactController@store');
 
+Route::post('', function () {
+    return view('');
+});
+
+Route::post('endpoint', function () {
+    return view('endpoint');
+});
 
 Route::get('endpoint', function () {
     return view('endpoint');
 });
 
 Route::get('viewarticles', 'ArticlesController@index');
+
+Route::get('showarticle', 'ArticlesController@showArticle');
+
 
 Route::get('main', function () {
     return view('main');
