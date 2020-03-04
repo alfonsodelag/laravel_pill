@@ -17,9 +17,9 @@
 
     <div class="container mt-5">
         <div class="col-12 mt-5">
-            <label for="title">Title:</label><input type="text" name="title">
-            <label for="email">E-mail:</label><input type="email" name="email">
-            <label for="user_ID">User ID</label><input type="number" name="user_ID">
+            <label for="title">Title:</label><input type="text" name="title" required>
+            <label for="email">E-mail:</label><input type="email" name="email" required>
+            <label for="user_ID">User ID</label><input type="number" name="user_ID" required>
         </div>
         <div class="col-12 mt-5">
             <label for="textarea">Text:</label>
