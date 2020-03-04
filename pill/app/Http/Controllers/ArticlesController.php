@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Article;
 use Illuminate\Http\Request;
 
-
 class ArticlesController extends Controller
 {
     public function save(Request $request)
@@ -26,14 +25,10 @@ class ArticlesController extends Controller
         return view('viewarticles', compact('articles'));
     }
 
-    public function showArticle(Request $request)
+    public function showArticle($slug)
     {
-        $article = Article::first();
+
+        $article = Article::where('slug_article', $slug)->paginate();
         return view('showarticle', compact('article'));
-    }
-
-    public function showSlug(Request $request)
-    {
-
     }
 }

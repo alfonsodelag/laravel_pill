@@ -9,17 +9,14 @@
             <tr>
                 <th>Article Title</th>
                 <th>Article Summary</th>
-                <th>Article Slug</th>
                 <th>Article Content</th>
             </tr>
                 <tr>
-                    <td>{{$article['article_title']}}</td>
-                    <td>{{$article['article_summary']}}</td>
-                    <td>{{$article['slug_article']}}</td>
-                    <td>{{$article['article_content']}}</td>
-                    <td><a href="/viewarticle/{{$article['slug_article']}}">{{$article['slug_article']}}</a></td>
+                    <td>{{$article[0]['article_title']}}</td>
+                    <td>{{$article[0]['article_summary']}}</td>
+                    <td>{{$article[0]['article_content']}}</td>
                 </tr>
         </table>
     </div>
 </div>
-
+@endsection
