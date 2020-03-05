@@ -31,6 +31,4 @@ class ArticlesController extends Controller
         $article = Article::where('slug_article', $slug)->paginate();
         return view('showarticle', compact('article'));
     }
-
-
 }
