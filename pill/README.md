@@ -7,6 +7,22 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Laravel Pill
+Laravel is one of PHP's most popular open source frameworks. It is simple, very powerful, and with a set of tools that provide us with everything necessary to develop a large project.
+
+Laravel's objective is to be a framework that allows the use of a refined and expressive syntax to create code in a simple way, avoiding the «spaghetti code» and allowing a multitude of functionalities. Take advantage of all the good of other frameworks and use the features of the latest versions of PHP. Are you ready?
+
+## Requirements
+-You must use GIT. It is important that the indications and commits are explicit and concrete enough to be able to understand the changes without the need to require additional information as much as possible.
+-Create a clear and orderly directory structure
+-Both the code and the comments must be written in English
+-Use the camelCase code style for defining variables and functions
+-In the case of using HTML, never use online styles
+-In the case of using different programming languages ​​always define the implementation in separate terms
+-Remember that it is important to divide the tasks into several sub-tasks so that in this way you can associate each particular step of the construction with a specific commit
+-You should try as much as possible that the commits and the planned tasks are the same
+-Delete files that are not used or are not necessary to evaluate the project
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
