@@ -21,7 +21,7 @@ class ArticlesController extends Controller
 
     public function index(Request $request)
     {
-        $articles = Article::all()->toArray();
+        $articles = Article::OrderBy('created_at', 'desc')->get();
         return view('viewarticles', compact('articles'));
     }
 
@@ -31,4 +31,6 @@ class ArticlesController extends Controller
         $article = Article::where('slug_article', $slug)->paginate();
         return view('showarticle', compact('article'));
     }
+
+
 }
