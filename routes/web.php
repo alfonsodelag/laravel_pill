@@ -24,12 +24,6 @@ Route::get('contact', function () {
 Route::post('sendmail', 'ContactController@store');
 
 
-
-
-// Route::get('endpoint', function () {
-//     return view('endpoint');
-// });
-
 Route::get('newarticles', function () {
     return view('newarticles');
 });
@@ -43,12 +37,6 @@ Route::get('/showarticle/{slug}', 'ArticlesController@showArticle');
 
 Route::get('viewarticles', 'ArticlesController@index');
 
-// Route::get('showarticle/', 'ArticlesController@showArticle');
-
-
-// Route::get('main', function () {
-//     return view('main');
-// });
 
 Auth::routes();
 

@@ -36,8 +36,6 @@
                 </a>
                 <a class="ml-4" href={{ url('viewarticles') }}>Articles</a>
                 <a class="ml-4" href={{ url('contact') }}>Contact</a>
-                <a class="ml-4" href={{ url('endpoint') }}>Endpoint</a>
-                <a class="ml-4" href={{ url('main') }}>Main</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
